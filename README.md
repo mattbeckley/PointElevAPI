@@ -6,29 +6,6 @@ A Python utility for querying interpolated point elevations from global and regi
 
 Given a longitude/latitude, the API returns the interpolated elevation, the dataset shortname, and the Vertical Coordinate Reference System (VCRS) in both WKT and EPSG formats. The default dataset is Copernicus 30m (COP30).
 
-## Repository Structure
-
-```
-PointElevAPI/
-├── PointElevationAPI.py    # Main CLI tool — query elevation for a point
-├── integration_tests.py    # Integration test suite against live service
-├── s3_url.json             # Dataset registry (shortnames, VRT URLs, VCRS metadata)
-├── ot.api_key              # API key for the OpenTopography service (not committed to VCS)
-├── logs/                   # Timestamped output logs from integration test runs
-└── dev/                    # Development/scratch versions (not production)
-    ├── PointElevationAPI.py        # Earlier version using PostgreSQL backend
-    ├── PointElevationAPI_LOCAL.py  # Local-only variant
-    ├── PointElevationAPI_Jan052026.py  # Snapshot from Jan 2026
-    ├── PointElevationAPI_Apr222026.py  # Snapshot from Apr 2026
-    ├── integration_tests_Jan052026.py  # Older integration test snapshot
-    ├── integration_tests_Apr222026.py  # Older integration test snapshot
-    ├── config.py                   # PostgreSQL connection config (dev only)
-    ├── DatasetswOTVCRS.txt         # Reference list of datasets and their VCRS
-    ├── VRTInfo.csv                 # VRT metadata reference
-    ├── testPoints.csv              # Sample coordinates for manual testing
-    ├── testing.py                  # Ad-hoc test scripts
-    └── printJSONFile.py            # Utility to pretty-print JSON metadata
-```
 
 ## Usage
 
